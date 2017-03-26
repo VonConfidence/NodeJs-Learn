@@ -1,0 +1,15 @@
+{
+  "name": "mysql_learn",
+  "version": "1.0.0",
+  "description": "Mysql",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "VonConfidence",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.15.2",
+    "mysql": "2.13.0"
+  }
+}
