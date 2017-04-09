@@ -6,21 +6,21 @@
    + 支持简单事务
    + 主从配置方便
 
-	数据库的安装与配置
-	+ redis-benchmark redis性能测试工具
-	+ redis-check-aof 检查aof日志的工具
-	+ redis-check-dump 检查rbd日志的工具
-	+ redis-cli 连接用的客户端
-	+ redis-server redis的服务进程
-	+ 启动 redis-server ./redis.conf  连接 redis-cli  使用 1)set site www.baidu.com 2)get site
-	+ 配置文件: redis以后台进程的方式运行 daemonize yes 
-	+ 设置redis密码： config set requirepass test123
-       查询密码：  config get requirepass
-       密码验证：    auth test123
+数据库的安装与配置
++ redis-benchmark redis性能测试工具
++ redis-check-aof 检查aof日志的工具
++ redis-check-dump 检查rbd日志的工具
++ redis-cli 连接用的客户端
++ redis-server redis的服务进程
++ 启动 redis-server ./redis.conf  连接 redis-cli  使用 1)set site www.baidu.com 2)get site
++ 配置文件: redis以后台进程的方式运行 daemonize yes 
++ 设置redis密码： config set requirepass test123
+  查询密码：  config get requirepass
+  密码验证：    auth test123
     
-    redis获取get配置数据项
+  redis获取get配置数据项
 	
-		CONFIG GET CONFIG_SETTING_NAME
+	CONFIG GET CONFIG_SETTING_NAME
 		config get loglevel
 			1) "loglevel"
 			2) "notice"
