@@ -20,13 +20,13 @@
     
   redis获取get配置数据项
 	
-	CONFIG GET CONFIG_SETTING_NAME
+		CONFIG GET CONFIG_SETTING_NAME
 		config get loglevel
-			1) "loglevel"
-			2) "notice"
-        config get * #获取所有的配置项
+				1) "loglevel"
+				2) "notice"
+		config get * #获取所有的配置项
     
-     redis设置set配置数据项
+  redis设置set配置数据项
 			
 		CONFIG SET CONFIG_SETTING_NAME NEW_CONFIG_VALUE
 		config set loglevel "notice"
@@ -70,7 +70,7 @@
 ##  2. redis键值操作
   + 开启数据库连接
 	
-		    redis-server.exe redis.windows.conf
+		  redis-server.exe redis.windows.conf
 			redis-cli.exe -h 127.0.0.1 -p 6379
 			set site www.baidu.com
 			get site
@@ -80,7 +80,7 @@
 		
 				set age 29
 		   
-	    如何获取当前所有的键值
+	  如何获取当前所有的键值
 	    
 				keys * 
 		
