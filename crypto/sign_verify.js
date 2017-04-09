@@ -8,7 +8,7 @@ var publicPem = fs.readFileSync('cert.pem');
 var key = privatePem.toString();
 var pubkey = publicPem.toString();
 
-var data = "abcdef"
+var data = "abcdef";
 
 //创建签名
 var sign = crypto.createSign('RSA-SHA256');

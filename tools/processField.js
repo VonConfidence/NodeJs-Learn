@@ -37,3 +37,7 @@ console.log(process.memoryUsage());
   heapUsed: 3142512,
   external: 8236 }
   */
+
+// 清空控制台
+process.stdout.write('\033[2J');
+process.stdout.write('\033[0f');
