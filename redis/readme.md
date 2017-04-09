@@ -1,10 +1,10 @@
 ### 学习目标
 ----
 ## 1. redis特点以及安装
-	+ 数据结构丰富(字符串 链表 哈希结构 集合 有序集合)
-	+ 持久化
-	+ 支持简单事务
-	+ 主从配置方便
+   + 数据结构丰富(字符串 链表 哈希结构 集合 有序集合)
+   + 持久化
+   + 支持简单事务
+   + 主从配置方便
 
 	数据库的安装与配置
 	+ redis-benchmark redis性能测试工具
@@ -67,15 +67,15 @@
 	15. 设置Redis连接密码，如果配置了连接密码，客户端在连接Redis时需要通过AUTH <password>命令提供密码，默认关闭
 	    requirepass foobared
         
-## 2. redis键值操作
-	+ 开启数据库连接
+##  2. redis键值操作
+  + 开启数据库连接
 	
 		    redis-server.exe redis.windows.conf
 			redis-cli.exe -h 127.0.0.1 -p 6379
 			set site www.baidu.com
 			get site
 	
-	+ redis对于所有的key的操作
+  + redis对于所有的key的操作
 		通用的键值操作
 		
 				set age 29
