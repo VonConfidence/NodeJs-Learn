@@ -5,9 +5,9 @@
    + 持久化
    + 支持简单事务
    + 主从配置方便
-
-	 数据库的安装与配置
-	 + redis-benchmark redis性能测试工具
+   
+   数据库的安装与配置
+     + redis-benchmark redis性能测试工具
 	 + redis-check-aof 检查aof日志的工具
 	 + redis-check-dump 检查rbd日志的工具
 	 + redis-cli 连接用的客户端
@@ -18,7 +18,7 @@
        查询密码：  config get requirepass
        密码验证：    auth test123
     
-    redis获取get配置数据项
+   redis获取get配置数据项
 	
         CONFIG GET CONFIG_SETTING_NAME
         config get loglevel
@@ -70,61 +70,61 @@
 ##  2. redis键值操作
   + 开启数据库连接
 	
-		  redis-server.exe redis.windows.conf
-			redis-cli.exe -h 127.0.0.1 -p 6379
-			set site www.baidu.com
-			get site
+		redis-server.exe redis.windows.conf
+		redis-cli.exe -h 127.0.0.1 -p 6379
+	        set site www.baidu.com
+		get site
 	
   + redis对于所有的key的操作
 	 通用的键值操作
 		
-		    set age 29
+	    set age 29
 		   
 	 如何获取当前所有的键值
 	    
-				keys * 
+		keys * 
 		
 	 精确查询, 模糊匹配(*多个字符 ?单个字符 []或匹配)
 		
-				keys site
-				keys s*
-				keys site*
-				keys sit[yea]
-				keys si?e
+		keys site
+		keys s*
+		keys site*
+		keys sit[yea]
+		keys si?e
 		
 	 返回随机key值
 				
-				randomkey
+		randomkey
 		
 	 返回键值的类型
 		
-				type age === string
-				type site === string
+		type age === string
+		type site === string
 		
 	 判断key值是否存在
 				
-				exists key === [1 | 0]
+		exists key === [1 | 0]
 		
 	 删除一个key值
 				
-				del age === [1 | 0]
+		del age === [1 | 0]
 		
 	 重命名key值 (如果newkey已经存在, 那么覆盖)
 				
-				rename key newkey
-				renamenx ket newkey # newkey已经存在的话, 不做修改
+		rename key newkey
+		renamenx ket newkey # newkey已经存在的话, 不做修改
 		
 	 修改数据库 (默认使用的数据库是0号 , 参考conf文件)
 			
-				select 1
+		select 1
 		
 	 设置key值得有效期限  -1代表永久有效 (对于不存在的返回-2 已经过期的key也返回nil)
 				
-				ttl age            # 查询有效期限返回秒数 (integer) -1
-				expire age 10 # 设置过期秒数
-				pexpire age 10000 # 设置过期的毫秒数
-				pttl age                  # 返回毫秒数过期时间
-				persist key             # 将指定的key设置为永久有效
+		ttl age            # 查询有效期限返回秒数 (integer) -1
+		expire age 10 # 设置过期秒数
+		pexpire age 10000 # 设置过期的毫秒数
+		pttl age                  # 返回毫秒数过期时间
+		persist key             # 将指定的key设置为永久有效
 		
 		
 		
