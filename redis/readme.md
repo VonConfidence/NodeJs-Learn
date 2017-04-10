@@ -61,11 +61,12 @@
    12. 指定本地数据库存放目录
        		dir ./
    13. 设置当本机为slav服务时，设置master服务的IP地址及端口，在Redis启动时，它会自动从master进行数据同步
-       		>> slaveof &lt;masterip&gt; &lt;  masterport&gt;
+       		slaveof &lt;masterip&gt; &lt;  masterport&gt;
    14. 当master服务设置了密码保护时，slav服务连接master的密码
-      		>> masterauth  &lt;master-password&gt;
-   15. 设置Redis连接密码，如果配置了连接密码，客户端在连接Redis时需要通过AUTH &lt;password&gt;命令提供密码，默认关闭
-       		>> requirepass foobared
+   				masterauth  &lt;master-password&gt;
+   15. 设置Redis连接密码，如果配置了连接密码，客户端在连接Redis时需要通过
+   			  AUTH &lt;password&gt;命令提供密码，默认关闭
+
         
 ##  2. redis键值操作
   + 开启数据库连接
